@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  mount StaticDocs::Engine => "/static_docs"
+  mount StaticDocs::Engine => "/"
 end
