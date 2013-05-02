@@ -2,7 +2,7 @@ module StaticDocs
   class Page < ActiveRecord::Base
 
     class << self
-      def matching(path)
+      def matched(path)
         where(:path => path).first!
       end
     end

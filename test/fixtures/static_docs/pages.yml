@@ -1,13 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  title: MyString
-  url: MyString
-  body: 
-  extension: MyString
+home_page:
+  title: Main page
+  path: home
+  body: '<h3>This is home page</h3>'
+  extension: html
 
-two:
-  title: MyString
-  url: MyString
-  body: 
-  extension: MyString
+first_level_page:
+  title: First Level Page
+  path: 'page'
+  body: '<h3>This is first level page</h3>'
+  extension: html
+
+namespaced_page:
+  title: Namespaced Page
+  path: 'namespace/page'
+  body: '<h3>This is namespaced page</h3>'
+  extension: html
+
+markdown_page:
+  title: Markdown Page
+  path: 'markdown'
+  body: '### This is markdown page'
+  extension: md
