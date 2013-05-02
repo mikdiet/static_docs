@@ -16,10 +16,14 @@ ActiveRecord::Schema.define(:version => 20130502133441) do
   create_table "static_docs_pages", :force => true do |t|
     t.string   "title"
     t.string   "path"
+    t.string   "namespace"
     t.text     "body",       :limit => 65537
     t.string   "extension"
     t.datetime "created_at",                  :null => false
     t.datetime "updated_at",                  :null => false
   end
+
+  add_index "static_docs_pages", ["namespace"], :name => "index_static_docs_pages_on_namespace"
+  add_index "static_docs_pages", ["path"], :name => "index_static_docs_pages_on_path"
 
 end

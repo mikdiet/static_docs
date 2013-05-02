@@ -3,7 +3,10 @@ module StaticDocs
 
     class << self
       def matched(path)
-        where(:path => path).first!
+        namespace, _, namespaced_path = path.partition('/')
+        page = where(:namespace => namespace, :path => namespaced_path).first if namespaced_path.present?
+        page ||= where(:namespace => nil, :path => path).first
+        page || raise(ActiveRecord::RecordNotFound)
       end
     end
 

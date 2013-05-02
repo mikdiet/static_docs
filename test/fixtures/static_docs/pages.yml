@@ -12,10 +12,23 @@ first_level_page:
   body: '<h3>This is first level page</h3>'
   extension: html
 
+deep_page:
+  title: First Level Page
+  path: 'path/to/page'
+  body: '<h3>This is third level page</h3>'
+  extension: html
+
 namespaced_page:
   title: Namespaced Page
-  path: 'namespace/page'
+  path: 'page'
+  namespace: 'namespace'
   body: '<h3>This is namespaced page</h3>'
+  extension: html
+
+deep_page_like_namespaced:
+  title: Namespaced Page
+  path: 'namespace/page'
+  body: '<h3>This is not namespaced page</h3>'
   extension: html
 
 markdown_page:
