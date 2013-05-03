@@ -4,9 +4,13 @@ module StaticDocs
     class << self
       def matched(path)
         namespace, _, namespaced_path = path.partition('/')
-        page = where(:namespace => namespace, :path => namespaced_path).first if namespaced_path.present?
-        page ||= where(:namespace => nil, :path => path).first
-        page || raise(ActiveRecord::RecordNotFound)
+        namespaced_matched(namespaced_path, namespace) || namespaced_matched(path) || raise(ActiveRecord::RecordNotFound)
+      end
+
+      def namespaced_matched(path, namespace = nil)
+        if path.present? && StaticDocs.namespaces.include?(namespace)
+          where(:namespace => namespace, :path => path).first
+        end
       end
     end
 

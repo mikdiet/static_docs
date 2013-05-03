@@ -31,6 +31,13 @@ deep_page_like_namespaced:
   body: '<h3>This is not namespaced page</h3>'
   extension: html
 
+wrong_namespaced_page:
+  title: Wrong Namespaced Page
+  path: 'page'
+  namespace: 'wrong'
+  body: '<h3>This is wrong namespaced page</h3>'
+  extension: html
+  
 markdown_page:
   title: Markdown Page
   path: 'markdown'

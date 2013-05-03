@@ -16,6 +16,10 @@ module StaticDocs
       assert_equal Page.matched('namespace/page'), static_docs_pages(:namespaced_page)
     end
 
+    test "search in unregistered namespace" do
+      assert_raise(ActiveRecord::RecordNotFound){ Page.matched('wrong/page') }
+    end
+
     test "search of nonexistent page" do
       assert_raise(ActiveRecord::RecordNotFound){ Page.matched('wrong') }
     end

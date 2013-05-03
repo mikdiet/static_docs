@@ -2,7 +2,7 @@ require "static_docs/engine"
 
 module StaticDocs
   mattr_accessor :sources
-  @@sources = {}
+  @@sources = {}.with_indifferent_access
 
   mattr_accessor :renderers
   @@renderers = {
@@ -25,6 +25,10 @@ module StaticDocs
 
   def self.setup(&block)
     instance_eval(&block)
+  end
+
+  def self.namespaces
+    @namespaces ||= sources.keys
   end
 
 end
