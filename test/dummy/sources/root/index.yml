@@ -1,0 +1,13 @@
+special:
+  - title:    Main Page
+    path:     home
+    file:     home.html
+
+pages:
+  - title:    Getting Started
+    path:     getting-started
+    file:     getting_started.html
+
+  - title:    This is Just Page
+    path:     page
+    file:     page.html

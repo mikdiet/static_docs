@@ -1,0 +1,9 @@
+special:
+  - title:    Namespace Main Page
+    path:     home
+    file:     home.html
+
+pages:
+  - title:    This is Just Namespaced Page
+    path:     page
+    file:     page.html
