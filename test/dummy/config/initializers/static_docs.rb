@@ -3,6 +3,11 @@ StaticDocs.setup do
   source 'sources/namespace', :namespace => :namespace
 
   renderer :md do |body|
-    "<h1>This is original markdown text</h1><pre>#{body}</pre>".html_safe
+    markdown(body)
+  end
+
+  renderer :txt do |body, page|
+    page.meta[:test] = 'test'
+    page.meta[:test] * 3
   end
 end

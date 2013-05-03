@@ -1,5 +1,6 @@
 module StaticDocs
   class Page < ActiveRecord::Base
+    attr_accessor :meta
 
     class << self
       def matched(path)
@@ -14,5 +15,16 @@ module StaticDocs
       end
     end
 
+    def meta
+      @meta ||= {}
+    end
+
+    def renderer
+      @renderer ||= StaticDocs.renderers[namespace].try(:fetch, extension) || StaticDocs.renderers[:default][extension]
+    end
+
+    def rendered_body(context)
+      context.instance_exec(body, self, &renderer)
+    end
   end
 end

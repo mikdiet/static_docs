@@ -43,3 +43,9 @@ markdown_page:
   path: 'markdown'
   body: '### This is markdown page'
   extension: md
+
+text_page:
+  title: Text Page
+  path: 'text'
+  body: 'some text'
+  extension: txt
