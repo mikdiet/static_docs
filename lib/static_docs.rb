@@ -17,10 +17,14 @@ module StaticDocs
     @@sources[namespace] = src
   end
 
-  def self.renderer(format, options, &block)
+  def self.renderer(format, options = {}, &block)
     namespace = options[:namespace] || :default
     @@renderers[namespace] ||= {}.with_indifferent_access
     @@renderers[namespace][format] = block
+  end
+
+  def self.setup(&block)
+    instance_eval(&block)
   end
 
 end
