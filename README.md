@@ -46,8 +46,8 @@ Then create your source manifest in `source/index.yml`
 ```yaml
 special:
   - title:    Main Page
-    path:     home
-    file:     home.html
+    path:     index
+    file:     index.html
 
 pages:
   - title:    This is Just Page
@@ -56,7 +56,7 @@ pages:
 
 ```
 
-Then create listed docs `source/home.html` and `source/page.html` with content
+Then create listed docs `source/index.html` and `source/page.html` with content
 you want.
 
 And next run `rake static_docs:import` to import files into database. You should

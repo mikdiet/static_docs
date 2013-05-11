@@ -2,7 +2,7 @@
 
 home_page:
   title: Main page
-  path: home
+  path: index
   body: '<h3>This is home page</h3>'
   extension: html
 

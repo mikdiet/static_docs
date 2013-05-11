@@ -27,7 +27,7 @@ module StaticDocs
 
     test 'import root' do
       Importer.import(nil)
-      main = Page.matched('home')
+      main = Page.matched('index')
       assert_equal main.title, 'Main Page'
       assert_equal main.extension, 'html'
       assert_equal main.body, "<p>Hello from homepage!</p>\n"
@@ -39,7 +39,7 @@ module StaticDocs
 
     test 'import namespaced' do
       Importer.import('namespace')
-      main = Page.matched('namespace/home')
+      main = Page.matched('namespace/index')
       assert_equal main.title, 'Namespace Main Page'
       assert_equal main.extension, 'html'
       assert_equal main.body, "<p>Hello from namespace!</p>\n"
