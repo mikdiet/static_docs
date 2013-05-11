@@ -1,5 +1,5 @@
 StaticDocs::Engine.routes.draw do
-  root :to => 'pages#show', :page_path => 'index'
+  root :to => 'pages#show'
   get '*page_path' => 'pages#show'
 
 

@@ -9,7 +9,8 @@ module StaticDocs
       end
 
       def namespaced_matched(path, namespace = nil)
-        if path.present? && StaticDocs.namespaces.include?(namespace)
+        if StaticDocs.namespaces.include?(namespace)
+          path = 'index' unless path.present?
           where(:namespace => namespace, :path => path).first
         end
       end

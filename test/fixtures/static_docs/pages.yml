@@ -18,6 +18,13 @@ deep_page:
   body: '<h3>This is third level page</h3>'
   extension: html
 
+namespaced_index_page:
+  title: Namespaced Index Page
+  path: 'index'
+  namespace: 'namespace'
+  body: '<h3>This is namespaced index page</h3>'
+  extension: html
+
 namespaced_page:
   title: Namespaced Page
   path: 'page'

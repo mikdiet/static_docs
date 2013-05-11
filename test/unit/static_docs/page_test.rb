@@ -8,12 +8,20 @@ module StaticDocs
       @view_context = Object.new.extend ::ApplicationHelper
     end
 
+    test 'index search' do
+      assert_equal Page.matched(''), static_docs_pages(:home_page)
+    end
+
     test "first-level search of matched page" do
       assert_equal Page.matched('page'), static_docs_pages(:first_level_page)
     end
 
     test "deep search of matched page" do
       assert_equal Page.matched('path/to/page'), static_docs_pages(:deep_page)
+    end
+
+    test 'namespaced index search' do
+      assert_equal Page.matched('namespace'), static_docs_pages(:namespaced_index_page)
     end
 
     test "namespaced search of matched page" do
