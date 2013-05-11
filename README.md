@@ -1,4 +1,4 @@
-StaticDocs
+StaticDocs [![Build Status](https://travis-ci.org/Mik-die/static_docs.png)](https://travis-ci.org/Mik-die/static_docs)
 ==========
 
 StaticDocs is about some static pages. These static pages can be created, stored
@@ -168,7 +168,6 @@ TODO list
 
 - setup generator
 - new doc generator
-- travis-ci
 - more ways where to store docs (another repo / web / absolute path)
 - skipping index page
 - more verbose error handling and warnings
