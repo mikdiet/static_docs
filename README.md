@@ -153,15 +153,21 @@ keyword `root` to point on root namespace.
 
 ### Deploy
 
-There is not special capistrano task for importing on deploy. Compose own task
-that invokes `static_pages:import` rake task.
+StaticDocs has Capistrano task to import pages into your production database.
+Just require the recipes:
+
+```ruby
+# config/deploy.rb
+require 'thinking_sphinx/capistrano'
+```
+
+And then invoke `cap static_docs:import` (or bind this task to another ones).
 
 TODO list
 ---------
 
 - setup generator
 - new doc generator
-- capistrano task
 - travis-ci
 - more ways where to store docs (another repo / web / absolute path)
 - skipping index page
