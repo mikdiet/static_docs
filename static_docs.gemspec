@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["MikDiet@gmail.com"]
   s.homepage    = "https://github.com/Mik-die/static_docs"
   s.summary     = "Static documentation mounting into your Rails app"
-  s.description = "Static pages can be created, stored and edited as files. Then them can be imported into DB of your app and be shown within app's layout. Rules of displaying are described in special manifest file, gem's initializer of app and in route file"
+  s.description = "Static pages can be created, stored and edited as files. Then they can be imported into DB of your app and be shown within app's layout. Rules of displaying are described in special manifest file, gem's initializer of app and in route file"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
