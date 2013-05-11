@@ -76,6 +76,14 @@ This is mountable engine and it should be mounted in your routes file
 Because it routes all requests within mounted path to own controller, you should
 mount at bottom of routes file (especially if you mount on `'/'` path).
 
+In your controllers and views you can use route helpers for pages (both are
+equal):
+
+```haml
+= link_to page.title, [static_docs, page]
+= link_to page.title, static_docs.page_path(page)
+```
+
 ### Sources
 
 You can describe several sources in initializer.
@@ -159,7 +167,6 @@ TODO list
 - skipping index page
 - more verbose error handling and warnings
 - custom fields for pages
-- url helper for page (it should take in count where engine is mounted + namespace + path)
 
 Note on Patches/Pull Requests
 -----------------------------

@@ -27,5 +27,9 @@ module StaticDocs
     def rendered_body(context)
       context.instance_exec(body, self, &renderer)
     end
+
+    def to_param
+      namespace && path == 'index' ? namespace : [namespace, path].compact.join('/')
+    end
   end
 end

@@ -50,5 +50,12 @@ module StaticDocs
       assert_equal page.rendered_body(@view_context), 'testtesttest'
       assert_equal page.meta[:test], 'test'
     end
+
+    test 'to_param' do
+      assert_equal 'index', static_docs_pages(:home_page).to_param
+      assert_equal 'path/to/page', static_docs_pages(:deep_page).to_param
+      assert_equal 'namespace', static_docs_pages(:namespaced_index_page).to_param
+      assert_equal 'namespace/page', static_docs_pages(:namespaced_page).to_param
+    end
   end
 end
