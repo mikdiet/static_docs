@@ -147,7 +147,7 @@ to get rendered body.
 
 ### Import
 
-Task for import pages to database is `rake static_pages:import`. Use
+Task for import pages to database is `rake static_docs:import`. Use
 `namespace=xxx` or `namespaces=xxx,yyy` to point what namespace to import. Use
 keyword `root` to point on root namespace.
 
@@ -158,7 +158,7 @@ Just require the recipes:
 
 ```ruby
 # config/deploy.rb
-require 'thinking_sphinx/capistrano'
+require 'static_docs/capistrano'
 ```
 
 And then invoke `cap static_docs:import` (or bind this task to another ones).
