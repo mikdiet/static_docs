@@ -1,4 +1,4 @@
-StaticDocs [![Build Status](https://travis-ci.org/Mik-die/static_docs.png)](https://travis-ci.org/Mik-die/static_docs)
+StaticDocs [![GitHub Actions CI](https://github.com/mikdiet/static_docs/workflows/CI/badge.svg)](https://github.com/mikdiet/static_docs/actions?query=workflow%3ACI)
 ==========
 
 StaticDocs is about some static pages. These static pages can be created, stored
@@ -185,7 +185,7 @@ Note on Patches/Pull Requests
 The MIT License (MIT)
 ---------------------
 
-Copyright 2013 Mikhail Dieterle (Mik-die)
+Copyright 2013 Mikhail Dieterle (mikdiet)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
