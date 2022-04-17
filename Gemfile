@@ -6,9 +6,9 @@ source "http://rubygems.org"
 gemspec
 
 group :development, :test do
-  # ares used by the dummy application
-  gem 'rails', '~> 4.0.0'
-  gem 'sqlite3', '~> 1.3.6'
+  # are used by the rails_app application
+  gem 'rails', '~> 6.0.0'
+  gem 'sqlite3'
   gem "jquery-rails"
 end
 

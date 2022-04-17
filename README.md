@@ -20,8 +20,8 @@ Add in Gemfile:
 gem 'static_docs'
 ```
 
-Then copy migrations `rake static_docs:install:migrations` and run them
-`rake db:migrate`.
+Then copy migrations `bin/rails static_docs:install:migrations` and run them
+`bin/rails db:migrate`.
 
 Then mount its engine at the bottom of your `config/routes.rb` (because it is
 greedy and following routes will never be mapped)
