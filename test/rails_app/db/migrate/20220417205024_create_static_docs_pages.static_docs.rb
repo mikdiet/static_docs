@@ -1,3 +1,4 @@
+# This migration comes from static_docs (originally 20130502102206)
 class CreateStaticDocsPages < ActiveRecord::Migration[6.0]
   def change
     create_table :static_docs_pages do |t|

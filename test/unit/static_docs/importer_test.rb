@@ -10,7 +10,7 @@ module StaticDocs
     end
 
     test 'source' do
-      src = File.expand_path("../../../dummy/sources/root", __FILE__)
+      src = File.expand_path("../../../rails_app/sources/root", __FILE__)
       assert_equal src, @importer.source.to_s
     end
 

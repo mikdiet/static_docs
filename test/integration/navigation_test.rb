@@ -7,7 +7,7 @@ class NavigationTest < ActionDispatch::IntegrationTest
   test 'browse pages' do
     get '/'
     assert_response :success
-    assert_select 'title', {:text => 'Dummy'}, 'Page must be rendered within application layout'
+    assert_select 'title', {:text => 'RailsApp'}, 'Page must be rendered within application layout'
     assert_select 'h3', {:text => 'This is home page'}
 
     get static_docs.page_path(static_docs_pages(:first_level_page))
